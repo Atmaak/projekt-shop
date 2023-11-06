@@ -1,0 +1,69 @@
+:root {
+    --text-color: white;
+    --tertiary-color: #43877B;
+    --secondary-color: #0D5146;
+    --primary-color: #00362D;
+}
+
+body, html {
+    margin: 0 !important;
+    padding: 0 !important;
+    color: var(--text-color);
+}
+
+h1 {
+    margin: 0;
+}
+
+#header {
+    background-color: var(--secondary-color);
+    padding: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header > * {
+    margin: 0;
+}
+
+.searchContainer {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.searchContainer > input[type="search"] {
+    height: 35px;
+    border-radius: 10px;
+}
+
+.searchContainer > i {
+    cursor: pointer;
+}
+
+.firstPart {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    background-color: var(--primary-color);
+}
+
+.productImage {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.description {
+    padding: 15px;
+    margin: 15px;
+    border: 2px solid var(--tertiary-color);
+}
+
+@media (max-width: 750px) { 
+    .firstPart{
+        display: flex;
+        flex-direction: column;
+    }
+}
