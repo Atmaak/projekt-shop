@@ -4,8 +4,19 @@
     min-height: 100vh;
 }
 
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
 #main {
-    
+    background-color: var(--primary-color);
+    display: grid;
+    grid-template-columns: 31% 31% 31%;
+    justify-content: center;
 }
 
 @media (max-width: 1000px) {
@@ -31,21 +42,6 @@
     border: 2px solid black;
     margin: 5px;
     border-radius: 10px;
-}
-
-.searchContainer {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.searchContainer > input[type="search"] {
-    height: 35px;
-    border-radius: 10px;
-}
-
-.searchContainer > i {
-    cursor: pointer;
 }
 
 .productContainer {
@@ -93,4 +89,37 @@
 
 .buyButton:hover::before {
     content: "Detail";
+}
+
+#landingPage {
+    position: relative;
+    text-align: center;
+    height: 100vh; /* Set the height to 100% of the viewport height */
+    overflow: hidden;
+}
+
+.landingPageImage {
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+    width: 100vw;
+}
+
+.landingPageTitle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.4);
+    font-size: 80px;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+
+@media (max-width: 1250px) {
+    #landingPage {
+        display: none;
+    }
 }

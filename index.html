@@ -6,13 +6,34 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="basic.css">
     <script src="https://kit.fontawesome.com/e4756798c1.js" crossorigin="anonymous"></script>
-    <title>E-shop</title>
+    <title>Elektroniks</title>
 </head>
 <body>
+    <script>
+        window.addEventListener('scroll', function() {
+            var header = document.getElementById('header');
+            var content = document.getElementById('content');
+            var screenOffset = window.innerHeight; // Height of one screen
+
+            if(window.innerWidth < 1250) return
+            if (window.scrollY > screenOffset) {
+                header.classList.add('sticky');
+                content.style.marginTop = header.offsetHeight + 'px'; // Adjust content's top margin
+            } else {
+                header.classList.remove('sticky');
+                content.style.marginTop = 0;
+            }
+        });
+    </script>
+
+    <div id="landingPage">
+        <h1 class="landingPageTitle">Elektroniks</h1>
+        <img src="./images/landingPage.webp" alt="" class="landingPageImage">
+    </div>
     <div id="header">
         <div class="headerLogo">
-            <img src="/logo.jpg" alt="" class="logo">
-            <h1>Elektroniks</h1>
+            <a href="/"><img src="/logo.webp" alt="" class="logo"></a>
+            <a href="/"><h1>Elektroniks</h1></a>
         </div>
         <div class="searchContainer">
             <input type="search">
@@ -20,83 +41,176 @@
         </div>
     </div>
 
-    <div id="main-container">
-        <div id="sidebar">
-            <div class="filterContainer">
-                <input type="checkbox" id="checkbox1">
-                <label for="checkbox1" class="checkboxLabel">Filter 1</label>
+    <div id="content">
+        <div id="main-container">
+            <div id="sidebar">
+                <div class="filterContainer">
+                    <input type="checkbox" id="category1" class="checkbox">
+                    <label for="category1" class="checkboxLabel">Chytrá elektronika</label>
+                </div>
+                
+                <div class="filterContainer">
+                    <input type="checkbox" id="brand1" class="checkbox">
+                    <label for="brand1" class="checkboxLabel">Apple</label>
+                </div>
+                
+                <div class="filterContainer">
+                    <input type="checkbox" id="price1" class="checkbox">
+                    <label for="price1" class="checkboxLabel">Do 500 Kč</label>
+                </div>
+                
+                <div class="filterContainer">
+                    <input type="checkbox" id="os1" class="checkbox">
+                    <label for="os1" class="checkboxLabel">Android</label>
+                </div>
+                
+                <div class="filterContainer">
+                    <input type="checkbox" id="display1" class="checkbox">
+                    <label for="display1" class="checkboxLabel">5.5" - 6.0"</label>
+                </div>
+                
+                <div class="filterContainer">
+                    <input type="checkbox" id="color1" class="checkbox">
+                    <label for="color1" class="checkboxLabel">Černá</label>
+                </div>
+                
+                <div class="filterContainer">
+                    <input type="checkbox" id="connectivity1" class="checkbox">
+                    <label for="connectivity1" class="checkboxLabel">Bluetooth</label>
+                </div>
+                
+                <div class="filterContainer">
+                    <input type="checkbox" id="performance1" class="checkbox">
+                    <label for="performance1" class="checkboxLabel">Rychlý procesor</label>
+                </div>
+                
+                <div class="filterContainer">
+                    <input type="checkbox" id="rating1" class="checkbox">
+                    <label for="rating1" class="checkboxLabel">4 hvězdičky a více</label>
+                </div>
+                
+                <div class="filterContainer">
+                    <input type="checkbox" id="condition1" class="checkbox">
+                    <label for="condition1" class="checkboxLabel">Nový</label>
+                </div>
+                
+                <div class="filterContainer">
+                    <input type="checkbox" id="battery1" class="checkbox">
+                    <label for="battery1" class="checkboxLabel">Lithium-polymer</label>
+                </div>
+                
+                <div class="filterContainer">
+                    <input type="checkbox" id="chipset1" class="checkbox">
+                    <label for="chipset1" class="checkboxLabel">Qualcomm</label>
+                </div>
+                
+                <div class="filterContainer">
+                    <input type="checkbox" id="memory1" class="checkbox">
+                    <label for="memory1" class="checkboxLabel">64 GB</label>
+                </div>
+                
+                <div class="filterContainer">
+                    <input type="checkbox" id="storage1" class="checkbox">
+                    <label for="storage1" class="checkboxLabel">256 GB</label>
+                </div>
+                
+                <div class="filterContainer">
+                    <input type="checkbox" id="architecture1" class="checkbox">
+                    <label for="architecture1" class="checkboxLabel">ARM</label>
+                </div>
+                
+                <div class="filterContainer">
+                    <input type="checkbox" id="input1" class="checkbox">
+                    <label for="input1" class="checkboxLabel">Dotykový displej</label>
+                </div>
+                
+                <div class="filterContainer">
+                    <input type="checkbox" id="category2" class="checkbox">
+                    <label for="category2" class="checkboxLabel">Kávovary</label>
+                </div>          
+                
             </div>
-            <div class="filterContainer">
-                <input type="checkbox" id="checkbox2">
-                <label for="checkbox2" class="checkboxLabel">Filter 2</label>
+        
+            <div id="main">
+                <div class="productContainer">
+                    <img src="images/pc.webp" alt="" class="productImage">
+                    <div class="productInfoContainer">
+                        <h1 class="productTitle">Notebook</h1>
+                    </div>
+                    <a href="subpages/notebook.html"><button class="buyButton"><span>Buy</span></button></a>
+                </div>            
+                <div class="productContainer">
+                    <img src="images/telefon.webp" alt="" class="productImage">
+                    <div class="productInfoContainer">
+                        <h1 class="productTitle">Telefon</h1>
+                    </div>
+                    <a href="subpages/telefon.html"><button class="buyButton"><span>Buy</span></button></a>
+                </div>            
+                <div class="productContainer">
+                    <img src="images/televize.webp" alt="" class="productImage">
+                    <div class="productInfoContainer">
+                        <h1 class="productTitle">Televize</h1>
+                    </div>
+                    <a href="subpages/televize.html"><button class="buyButton"><span>Buy</span></button></a>
+                </div>            
+                <div class="productContainer">
+                    <img src="images/tiskarna.webp" alt="" class="productImage">
+                    <div class="productInfoContainer">
+                        <h1 class="productTitle">Tiskarna</h1>
+                    </div>
+                    <a href="subpages/tiskarna.html"><button class="buyButton"><span>Buy</span></button></a>
+                </div>            
+                <div class="productContainer">
+                    <img src="images/tablet.webp" alt="" class="productImage">
+                    <div class="productInfoContainer">
+                        <h1 class="productTitle">Tablet</h1>
+                    </div>
+                    <a href="subpages/tablet.html"><button class="buyButton"><span>Buy</span></button></a>
+                </div>            
+                <div class="productContainer">
+                    <img src="images/klavesnice.webp" alt="" class="productImage">
+                    <div class="productInfoContainer">
+                        <h1 class="productTitle">Klavesnice</h1>
+                    </div>
+                    <a href="subpages/klavesnice.html"><button class="buyButton"><span>Buy</span></button></a>
+                </div>            
+                         
             </div>
-            <div class="filterContainer">
-                <input type="checkbox" id="checkbox3">
-                <label for="checkbox3" class="checkboxLabel">Filter 3</label>
-            </div>
-            <div class="filterContainer">
-                <input type="checkbox" id="checkbox4">
-                <label for="checkbox4" class="checkboxLabel">Filter 4</label>
-            </div>
-            <div class="filterContainer">
-                <input type="checkbox" id="checkbox5">
-                <label for="checkbox5" class="checkboxLabel">Filter 5</label>
-            </div>
-            <div class="filterContainer">
-                <input type="checkbox" id="checkbox6">
-                <label for="checkbox6" class="checkboxLabel">Filter 6</label>
+    
+            <div id="footer">
+                <div class="footer-content">
+                    <div class="company-info">
+                        <div class="footerTitleContainer">
+                            <h4>O Nás</h4>
+                        </div>
+                        <p>Jsme společnost specializující se na prodej kvalitní elektroniky a technologických produktů. Naše firma je známá svým dlouholetým závazkem k poskytování zákazníkům prvotřídních produktů a služeb.</p>
+                    </div>
+                    <div class="contact-info">
+                        <div class="footerTitleContainer">
+                            <h4>Kontaktujte Nás</h4>
+                        </div>
+                        <p>Adresa: Hostěnice 38, Roudnice nad Labem, 411 01</p>
+                        <a href="mailto:info@elektroniks.com"><p>Email: info@elektroniks.com</p></a>
+                        <a href="tel:+420123456789"><p>Telefon: +420 123 456 789</p></a>
+                    </div>
+                    <div class="follow-us">
+                        <div class="footerTitleContainer">
+                            <h4>Sledujte Nás</h4>
+                        </div>
+                        <div class="icons">
+                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2023 Elektroniks - Všechna práva vyhrazena</p>
+                    <p>Datum poslední aktualizace: 7. listopadu 2023</p>
+                </div>
             </div>
             
-        </div>
-    
-        <div id="main">
-            <div class="productContainer">
-                <img src="images/pc.jpg" alt="" class="productImage">
-                <div class="productInfoContainer">
-                    <h1 class="productTitle">Notebook</h1>
-                </div>
-                <a href="/product1.html"><button class="buyButton"><span>Buy</span></button></a>
-            </div>            
-            <div class="productContainer">
-                <img src="images/telefon.jpg" alt="" class="productImage">
-                <div class="productInfoContainer">
-                    <h1 class="productTitle">Telefon</h1>
-                </div>
-                <button class="buyButton"><span>Buy</span></button>
-            </div>            
-            <div class="productContainer">
-                <img src="images/televize.jpg" alt="" class="productImage">
-                <div class="productInfoContainer">
-                    <h1 class="productTitle">Televize</h1>
-                </div>
-                <button class="buyButton"><span>Buy</span></button>
-            </div>            
-            <div class="productContainer">
-                <img src="images/tiskarna.jpg" alt="" class="productImage">
-                <div class="productInfoContainer">
-                    <h1 class="productTitle">Tiskarna</h1>
-                </div>
-                <button class="buyButton"><span>Buy</span></button>
-            </div>            
-            <div class="productContainer">
-                <img src="images/tablet.jpg" alt="" class="productImage">
-                <div class="productInfoContainer">
-                    <h1 class="productTitle">Tablet</h1>
-                </div>
-                <button class="buyButton"><span>Buy</span></button>
-            </div>            
-            <div class="productContainer">
-                <img src="images/klavesnice.jpg" alt="" class="productImage">
-                <div class="productInfoContainer">
-                    <h1 class="productTitle">Klavesnice</h1>
-                </div>
-                <button class="buyButton"><span>Buy</span></button>
-            </div>            
-                     
-        </div>
-
-        <div id="footer">
-
         </div>
     </div>
 </body>
