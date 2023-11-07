@@ -51,6 +51,7 @@
     box-sizing: border-box;
     height: fit-content;
     margin: 15px;
+    text-align: center;
 }
 
 .productInfoContainer {
@@ -70,12 +71,16 @@
 }
 
 .buyButton {
-    width: 90%;
-    height: 35px;
-    background-color: var(--text-color);
-    border-radius: 10px;
-    margin-bottom: 10px;
+    width: 80%;
+    background-color: var(--secondary-color);
+    display: inline-block;
+    padding: 10px 5px;
     margin: 15px;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 15px;
+    font-weight: bold;
+    text-align: center;
 }
 
 .buyButton:hover {
